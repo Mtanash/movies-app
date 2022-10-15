@@ -1,13 +1,49 @@
-body {
+/* start variables */
+:root {
+  /* colors */
+  --clr-primary: #150050;
+  --clr-secondary: #256d85;
+  --clr-pale-white: #dff6ff;
+  --clr-pale-blue: #47b5ff;
+  --clr-dark-black: #000;
+  --clr-pale-black: #333;
+  --clr-medium-black: #222;
+  --clr-pink: #fb2576;
+}
+/* end variables */
+
+/* start global styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: "Cairo", sans-serif;
 }
+
+body {
+  background-color: var(--clr-dark-black);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+/* end global styles */

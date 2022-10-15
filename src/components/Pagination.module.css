@@ -1,0 +1,29 @@
+.pagination {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.page {
+  border: 1px solid var(--clr-pink);
+  border-radius: 0.5rem;
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.prevButton {
+  background-color: var(--clr-pink);
+  color: var(--clr-pale-white);
+  font-weight: bold;
+  font-size: large;
+}
+
+.nextButton {
+  background-color: var(--clr-pink);
+  color: var(--clr-pale-white);
+  font-weight: bold;
+  font-size: large;
+}

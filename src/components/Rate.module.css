@@ -1,0 +1,19 @@
+.rate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  background-color: var(--clr-dark-black);
+  color: var(--clr-pale-white);
+  padding: 0.25rem 0.5rem;
+  border-radius: 1rem;
+  font-size: small;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.5rem;
+}
+
+.rateIcon {
+  color: yellow;
+  margin-right: 0.1rem;
+}

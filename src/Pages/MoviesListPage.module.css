@@ -1,0 +1,18 @@
+.moviesList {
+  min-height: calc(100vh - 80px);
+  padding: 0.75rem 0;
+  color: var(--clr-pale-white);
+}
+
+.title {
+  text-align: center;
+  font-size: xx-large;
+  padding-bottom: 1rem;
+}
+
+.moviesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}

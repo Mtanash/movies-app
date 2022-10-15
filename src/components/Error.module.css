@@ -1,0 +1,11 @@
+.error {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-content: center;
+}
+
+.error > h3 {
+  font-size: x-large;
+  color: var(--clr-pink);
+  text-align: center;
+}

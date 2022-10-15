@@ -1,0 +1,44 @@
+.homePage {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  place-content: center;
+  background: url("/src/images/landing3.jpg") rgb(0 0 0/ 80%);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: var(--clr-pale-white);
+}
+
+.homePageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  font-weight: bolder;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.link {
+  background-color: var(--clr-pink);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-weight: bold;
+  font-size: x-large;
+  width: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease-in-out 200ms;
+  box-shadow: 0 0 20px 0 rgb(255 255 255 / 14%);
+}
+
+.link:hover,
+.link:focus {
+  letter-spacing: 1.2px;
+}
