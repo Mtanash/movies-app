@@ -4,7 +4,7 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
   justify-content: center;
   color: var(--clr-pale-white);
@@ -13,6 +13,7 @@
 .image {
   border-radius: 1rem;
   flex: 0.5;
+  width: 100%;
 }
 
 .details {
@@ -64,6 +65,17 @@
   gap: 0.75rem;
   width: fit-content;
   width: 100%;
+  justify-content: center;
+}
+
+.genresWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.genresWrapper > p {
+  font-size: x-large;
 }
 
 .genre {
@@ -109,4 +121,14 @@
 
 .watchIcon {
   font-size: 3rem;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .genres {
+    justify-content: flex-start;
+  }
 }

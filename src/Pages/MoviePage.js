@@ -70,16 +70,18 @@ const MoviePage = () => {
             </div>
             <p className={styles.overview}>{overview}</p>
 
-            <div className={styles.genres}>
-              Genres
-              {genres?.map((genre) => {
-                const { id, name } = genre;
-                return (
-                  <div className={styles.genre} key={id}>
-                    {name}
-                  </div>
-                );
-              })}
+            <div className={styles.genresWrapper}>
+              <p>Genres</p>
+              <div className={styles.genres}>
+                {genres?.map((genre) => {
+                  const { id, name } = genre;
+                  return (
+                    <div className={styles.genre} key={id}>
+                      {name}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
 
             <a
