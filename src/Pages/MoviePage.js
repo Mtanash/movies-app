@@ -5,7 +5,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { useParams } from "react-router-dom";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
-import Rate from "../components/Rate";
+import Vote from "../components/Vote";
 import { apiKey } from "../constants";
 import { toHoursAndMinutes } from "../helpers/timeConvert";
 import useAxios from "../hooks/useAxios";
@@ -24,6 +24,7 @@ const MoviePage = () => {
       homepage,
       runtime,
       vote_average,
+      vote_count,
     },
     error: movieError,
     loading: movieLoading,
@@ -60,7 +61,12 @@ const MoviePage = () => {
           <div className={styles.details}>
             <h2 className={styles.title}>{title}</h2>
             <div className={styles.rateWrapper}>
-              <Rate voteAverage={vote_average} className={styles.vote} />
+              <Vote
+                full
+                voteAverage={vote_average}
+                className={styles.vote}
+                voteCount={vote_count}
+              />
               <p className={styles.runtime}>
                 {toHoursAndMinutes(runtime)} <BiTime />
               </p>

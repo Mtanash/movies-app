@@ -1,9 +1,9 @@
 import { AiFillStar } from "react-icons/ai";
 import kFormatter from "../helpers/Kformatter";
 import roundToOneDecimal from "../helpers/roundToOneDecimal";
-import styles from "./Rate.module.css";
+import styles from "./Vote.module.css";
 
-const Rate = ({ voteAverage, className, full = false, voteCount }) => {
+const Vote = ({ voteAverage, className, full = false, voteCount }) => {
   return (
     <div className={className}>
       <AiFillStar className={styles.rateIcon} />
@@ -17,4 +17,4 @@ const Rate = ({ voteAverage, className, full = false, voteCount }) => {
   );
 };
 
-export default Rate;
+export default Vote;
