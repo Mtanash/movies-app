@@ -1,40 +1,35 @@
-import { useCallback, useEffect, useRef } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useEffect, useRef } from "react";
+import { useSearchParams } from "react-router-dom";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
 import MovieCard from "../components/MovieCard";
 import Pagination from "../components/Pagination";
 import { apiKey } from "../constants";
 import useAxios from "../hooks/useAxios";
+import usePagination from "../hooks/usePagination";
 import styles from "./MoviesListPage.module.css";
 
 const MoviesListPage = () => {
   const moviesListRef = useRef();
-  const navigate = useNavigate();
 
   const [searchParams] = useSearchParams();
   const page = searchParams.get("page") || 1;
 
   const {
-    data: { page: pageIndex, results: movies, total_pages, total_results },
+    data: { results: movies },
     error: moviesError,
     loading: moviesLoading,
     fetchData,
   } = useAxios();
 
-  const handlePageIncrease = useCallback(() => {
-    if (page === total_pages) return;
+  const maxPage = 500;
 
-    moviesListRef.current.scrollIntoView();
-    navigate(`/movies?page=${+page + 1}`);
-  }, [page, total_pages, navigate]);
-
-  const handlePageDecrease = useCallback(() => {
-    if (page === 1) return;
-
-    moviesListRef.current.scrollIntoView();
-    navigate(`/movies?page=${+page - 1}`);
-  }, [page, navigate]);
+  const {
+    handleFirstPageClick,
+    handleLastPageClick,
+    handlePageDecrease,
+    handlePageIncrease,
+  } = usePagination(page, maxPage, moviesListRef);
 
   useEffect(() => {
     let mounted = true;
@@ -63,14 +58,18 @@ const MoviesListPage = () => {
 
   return (
     <section ref={moviesListRef} className={styles.moviesList}>
-      <h2 className={styles.title}>Popular movies</h2>
-      <div className={styles.moviesContainer}>{content}</div>
-      <Pagination
-        page={page}
-        totalPages={total_pages}
-        handlePageDecrease={handlePageDecrease}
-        handlePageIncrease={handlePageIncrease}
-      />
+      <div className="container">
+        <h2 className={styles.title}>Popular movies</h2>
+        <div className={styles.moviesContainer}>{content}</div>
+        <Pagination
+          page={page}
+          maxPage={maxPage}
+          handlePageDecrease={handlePageDecrease}
+          handlePageIncrease={handlePageIncrease}
+          handleLastPageClick={handleLastPageClick}
+          handleFirstPageClick={handleFirstPageClick}
+        />
+      </div>
     </section>
   );
 };
