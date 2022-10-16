@@ -1,12 +1,6 @@
 .movieCard {
   width: 200px;
-  transition: transform ease-in-out 300ms;
   height: 350px;
-}
-
-.movieCard:hover {
-  transform: scale(1.1);
-  z-index: 2;
 }
 
 .movieImage {
