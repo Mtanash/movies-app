@@ -36,7 +36,7 @@ const MoviePage = () => {
     const controller = new AbortController();
 
     fetchData(
-      `/${movieId}?api_key=${apiKey}&language=en-US`,
+      `/movie/${movieId}?api_key=${apiKey}&language=en-US`,
       controller.signal,
       mounted
     );

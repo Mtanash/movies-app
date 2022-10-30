@@ -1,0 +1,36 @@
+.searchBar {
+  background-color: #222;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  position: relative;
+  margin: 1.5rem 0;
+  z-index: 2;
+}
+
+.input {
+  outline: none;
+  background-color: transparent;
+  color: white;
+  border: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+.result {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  left: 0;
+  top: 46px;
+  z-index: 2;
+  background-color: #222;
+  overflow-y: scroll;
+}
+
+.empty {
+  display: grid;
+  place-content: center;
+  height: 100%;
+}
