@@ -1,0 +1,26 @@
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 45px;
+  height: 45px;
+}
+
+.avatar img {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+}
+
+.letter {
+  background-color: var(--clr-pale-white);
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-content: center;
+}
+
+.letter > span {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--clr-dark-black);
+}

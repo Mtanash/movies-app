@@ -1,0 +1,49 @@
+.authPage {
+  color: white;
+  min-height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
+}
+
+.authPage::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  background-color: var(--clr-pale-black);
+  border-bottom-right-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.authPageContainer {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  min-height: 70vh;
+  background-color: var(--clr-medium-black);
+  position: relative;
+  z-index: 1;
+  border-radius: 1.25rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pageTitle {
+  font-weight: bolder;
+  font-size: 2rem;
+  color: var(--clr-pink);
+  margin-bottom: 1rem;
+}
+
+.footer {
+  margin: 1.25rem 0;
+  cursor: pointer;
+}

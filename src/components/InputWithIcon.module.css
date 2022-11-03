@@ -1,0 +1,24 @@
+.inputWithIcon {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 5px;
+  color: var(--clr-pink);
+  height: 100%;
+  width: 25px;
+}
+
+.input {
+  font-size: 1.1rem;
+  text-indent: 35px;
+  height: 35px;
+  background-color: var(--clr-medium-black);
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--clr-pink);
+  color: var(--clr-pale-white);
+  width: 100%;
+}

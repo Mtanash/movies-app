@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import AuthPage from "./Pages/AuthPage";
 import HomePage from "./Pages/HomePage";
 import MoviePage from "./Pages/MoviePage";
 import MoviesListPage from "./Pages/MoviesListPage";
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/auth" element={<AuthPage />} />
         <Route path="/movies" element={<MoviesListPage />} />
         <Route path="/movies/:movieId" element={<MoviePage />} />
       </Routes>

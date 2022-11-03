@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useCallback, useState } from "react";
 import axiosInstance from "../api/axiosInstance";
 
@@ -13,6 +14,22 @@ function useAxios() {
       if (!mounted) return;
       setData(response.data);
       setError(null);
+      return response;
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  const postData = useCallback(async (url, body) => {
+    setLoading(true);
+
+    try {
+      const response = await axios.post(url, body);
+      setData(response?.data);
+      setError(null);
+      return response;
     } catch (error) {
       setError(error);
     } finally {
@@ -25,6 +42,7 @@ function useAxios() {
     loading,
     error,
     fetchData,
+    postData,
   };
 }
 
